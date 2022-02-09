@@ -50,30 +50,27 @@ export const Pole = () => {
                 const rate = 1/ Number(rates.eur) 
                 setInpVal( (rate* result).toFixed(2) )
             }
-
-            
         }
 
     return(
         <>
         <div id="pole1">
             <input id="input1" placeholder={'введите вашу валюту'}/>
-            <select id="select1">
-                <option id="1">USD</option>
-                <option id="2">EUR</option>
+            <select id="select1" onChange={caclucateMoney}>
+                <option id="1" >USD</option>
+                <option id="2" >EUR</option>
                 <option id="3">UAH</option>
             </select>
         </div>
 
         <div id="pole1">
             <input id="input2" readOnly placeholder={'какую валюту хотите? ->'} value={inpVal}/>
-            <select id="select2">
+            <select id="select2" onChange={caclucateMoney}>
                 <option id="4">USD</option>
                 <option id="5">EUR</option>
                 <option id="6">UAH</option>
             </select>
         </div>
-        <button id="btn" onClick={caclucateMoney}>Convert</button>
         </>
     );
 }
