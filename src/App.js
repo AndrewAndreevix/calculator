@@ -1,9 +1,10 @@
 import { Pole } from "./component";
-
+import { Actual } from "./Rates"
 
 function Index() {
   return (
     <div className="App">
+      <Actual/>
       <h1>Converter</h1>
       <Pole/>
     </div>
